@@ -38,14 +38,14 @@ server.on("connection", function(id) {
 
   2) "message" event - get hold of the message
   <pre>server.on("message", function(data, id) {
-  var mes = server.unmaskMessage(data);
-  var str = server.convertToString(mes.message);
-  console.log(str);
+    var mes = server.unmaskMessage(data);
+    var str = server.convertToString(mes.message);
+    console.log(str);
 });</pre>
 
   3) "connectionclosed" - log a connection has left (can also use id to remove from connectionList)
   <pre>server.on("closedconnection", function(id) {
-  console.log("Connection " + id + " has left the server");
+    console.log("Connection " + id + " has left the server");
 });</pre>
   
 Functions
