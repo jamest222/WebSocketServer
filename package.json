@@ -1,10 +1,14 @@
 {
-	"name": "WebSocketServer",
+	"name": "websocketserver",
 	"version": "1.0.0",
 	"author": "James Taylor <james.taylor5@myport.ac.uk>",
 	"description": "A WebSocket Server implementation for Node.js",
 	"main": "./index.js",
 	"bin": {
 		"WebSocketServer": "./index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jamest222/WebSocketServer.git"
 	}
 }
