@@ -76,13 +76,15 @@ Functions
   
   <pre>server.on('message', function(data, id) {
      var mes = server.unmaskMessage(data);
-     if (mes.opcode == 130) {
+     if (server.messageType(mes.opcode) == "binary") {
          var packagedMessage = server.packageMessage(mes.opcode, mes.message);
          server.sendMessage('all', packagedMessage);
      }
 });</pre>
 
   5) `WebSocketServer.closeConnection(id);` close a specific connection
+  
+  6) `WebSocketServer.messageType(opcode)` - takes an opcode and returns a string value based on the message type - `"text"` `"binary"` or `"invalid"` (other message types are dealt with internally)
   
  
       
