@@ -1,6 +1,6 @@
 WebSocketServer
 ===============
-A WebSocket server implementation for Node.js, various features to still implement such as support for wss:// and preformance analytics centre.
+A WebSocket server implementation for Node.js, various features to still implement such as support for wss:// and performance analytics centre.
 
 Installation
 ============
