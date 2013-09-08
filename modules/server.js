@@ -184,6 +184,26 @@ WebSocketServer.prototype.convertToString = function(message) {
 	return str;
 }
 
+// Return the type of received message
+WebSocketServer.prototype.messageType = function(opcode) {
+	// Check that the opcode is a valid whole number
+	if ((typeof opcode != 'number') || (opcode % 1 != 0)) {
+		console.log("An opcode must be an integer");
+		return "invalid";
+	}
+	if (opcode === 129) {
+		return "text";
+	}
+	else if (opcode === 130) {
+		return "binary";
+	}
+	else {
+		console.log("Cannot determine type of message");
+		return "invalid";
+	}
+
+}
+
 module.exports = WebSocketServer;
 
 
