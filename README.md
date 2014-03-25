@@ -15,7 +15,7 @@ In a project require the websocketserver module and create an instance of it:
 <pre>var WebSocketServer = require("websocketserver");
 var server = new WebSocketServer("all", 9000);</pre>
 
-This will create a WebSocket server that runs on 9000 (default 8080) and uses a sendMethod that sends recieved connections to all server connections. Four sendMethods can be used:
+This will create a WebSocket server that runs on 9000 (default 8080) and uses a sendMethod that sends recieved messages to all server connections. Four sendMethods can be used:
  
   1) `all` - will send received messages to all users
   
